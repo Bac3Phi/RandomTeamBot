@@ -18,11 +18,10 @@ client.on('message', msg => {
     if (!args.length) {
       return msg.channel.send(`You didn't provide any arguments, ${msg.author}!`);
     }
-    let team_size = args[0]
+    let team_size = args.shift()
     let team_group = [];
     let message = "";
-    args.shift()
-
+    
     args.sort(function(){
         return Math.round(Math.random()) - 0.5;
     });
