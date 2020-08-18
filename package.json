@@ -1,0 +1,11 @@
+{
+  "name": "RandomTeamBot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Bac3Phi/RandomTeamBot.git",
+  "author": "Bac3Phi <gkztest1@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
