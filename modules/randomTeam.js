@@ -1,4 +1,4 @@
-module.exports = commandRandom = (args) => {
+module.exports = randomTeam = (args) => {
   let message = "";
 
   if (!args.length) {
