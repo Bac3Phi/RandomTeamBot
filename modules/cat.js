@@ -1,5 +1,7 @@
 class Cat{
-    i_meowTime = 0;
+    contructor(){
+        this.i_meowTime = 0;
+    }
 
     command(command){
         let first_arg = command[0];
