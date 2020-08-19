@@ -15,8 +15,10 @@ class Cat{
         else if ( first_arg === "showpussy" )
         {
             this.showPussy(msg);
+        }else
+        {
+            msg.reply("Meow meow the fuck?");
         }
-        msg.reply("Meow meow the fuck?");
     }
 
     meow(){
