@@ -16,7 +16,7 @@ class Cat{
         {
             this.showPussy(msg);
         }
-        return "Meow meow the fuck?";
+        msg.reply("Meow meow the fuck?");
     }
 
     meow(){
