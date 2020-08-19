@@ -7,7 +7,7 @@ module.exports = randomRace = (args) => {
 
 	let races = ['Zerg', 'Terrans', 'Protoss'];
 	args.forEach((member) => {
-		let randomRace = Math.floor(Math.random() * races.length);
+		let randomRace = races[Math.floor(Math.random() * races.length)];
 		message +=`${member}: ${randomRace}\n`;
 	});
 
