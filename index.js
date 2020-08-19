@@ -14,10 +14,11 @@ client.on('message', msg => {
   const args = msg.content.slice(prefix.length).trim().split(' ');
   const command = args.shift().toLowerCase();
 
-  if (msg.content === 'ping') {
-    msg.reply('pong');
+  if (command === 'ping') {
+    msg.reply('xua con cat');
   }else if (command === 'random') {
     msg.channel.send(commandRandom(args));
   }
 });
+console.log("Token: ",process.env.token.substr(0,20)+"...");
 client.login(process.env.token);
