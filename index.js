@@ -34,3 +34,4 @@ client.on('message', (msg) => {
 
 console.log('Token: ', process.env.token.substr(0, 20) + '...');
 client.login(process.env.token);
+
