@@ -13,8 +13,8 @@ client.on('message', msg => {
   const args = msg.content.slice(prefix.length).trim().split(' ');
   const command = args.shift().toLowerCase();
 
-  if (msg.content === 'ping') {
-    msg.reply('pong');
+  if (command === 'ping') {
+    msg.reply('xua con cat');
   }else if (command === 'random') {
     if (!args.length) {
       return msg.channel.send(`You didn't provide any arguments, ${msg.author}!`);
@@ -41,4 +41,5 @@ client.on('message', msg => {
     msg.channel.send(`Team group: ${team_size}\n${message}`);
   }
 });
+console.log("Token: ",process.env.token.substr(0,20)+"...");
 client.login(process.env.token);
