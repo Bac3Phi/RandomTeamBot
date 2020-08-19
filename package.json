@@ -6,6 +6,7 @@
   "author": "Bac3Phi <gkztest1@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.19.2",
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0"
   },

@@ -20,7 +20,7 @@ client.on('message', msg => {
   }else if (command === 'random') {
     msg.channel.send(commandRandom(args));
   }else if (command === 'cat') {
-    msg.reply( cat.command(args) );
+    cat.command(args, msg);
   }else if (command === 'help') {
     msg.reply('hihi chưa implement help <3');
   }else{
