@@ -20,7 +20,7 @@ client.on("message", (msg) => {
   if (command === 'ping') {
     msg.reply('xua con cat');
   }else if (command === 'random_team') {
-    msg.channel.send(commandRandom(args));
+    msg.channel.send(randomTeam(args));
   }else if (command === 'cat') {
     cat.command(args, msg);
   } else if (command === "random_race") {
