@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 require('dotenv').config()
-const commandRandom = require('./modules/random')
+const commandRandom = require('./modules/random');
+const cat = require('./modules/cat');
 const prefix = '*';
 
 client.on('ready', () => {
@@ -19,7 +20,7 @@ client.on('message', msg => {
   }else if (command === 'random') {
     msg.channel.send(commandRandom(args));
   }else if (command === 'cat') {
-
+    msg.reply( cat.command(args) );
   }else if (command === 'help') {
     msg.reply('hihi chưa implement help <3');
   }else{
