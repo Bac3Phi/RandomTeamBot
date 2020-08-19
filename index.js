@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+require('dotenv').config()
 const prefix = '*';
 
 client.on('ready', () => {
@@ -40,5 +41,4 @@ client.on('message', msg => {
     msg.channel.send(`Team group: ${team_size}\n${message}`);
   }
 });
-
 client.login(process.env.token);
