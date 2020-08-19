@@ -18,6 +18,12 @@ client.on('message', msg => {
     msg.reply('xua con cat');
   }else if (command === 'random') {
     msg.channel.send(commandRandom(args));
+  }else if (command === 'cat') {
+
+  }else if (command === 'help') {
+    msg.reply('hihi chưa implement help <3');
+  }else{
+    msg.reply('xua con cat gì deo hiểu, "*help" đi bạn tôi ơi!');
   }
 });
 console.log("Token: ",process.env.token.substr(0,20)+"...");
