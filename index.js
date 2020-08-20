@@ -9,8 +9,9 @@ const prefix = "*";
 
 client.on("ready", () =>
 {
-    const channel = client.channels.cache.find(channel => (channel.name.includes("spam") ||channel.name.includes("bot")));
-    channel.send("Busku Bot is back!!");
+    let channel = client.channels.cache.find(channel => (channel.name.includes("spam") ||channel.name.includes("bot")));
+    let bot_name = client.user.username;
+    channel.send(bot_name+" is back!!");
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
