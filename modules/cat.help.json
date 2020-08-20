@@ -1,0 +1,8 @@
+{
+    "command" :{
+        "help" : {
+            "args" : null,
+            "description" : "Let me give you a helping paw"
+        }
+    }
+}

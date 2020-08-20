@@ -31,5 +31,6 @@ client.on("message", (msg) => {
     msg.reply('xua con cat gì deo hiểu, "*help" đi bạn tôi ơi!');
   }
 });
+cat.help();
 console.log("Token: ",process.env.token.substr(0,20)+"...");
 client.login(process.env.token);
