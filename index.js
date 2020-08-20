@@ -9,7 +9,7 @@ const prefix = "*";
 
 client.on("ready", () =>
 {
-    const channel = client.channels.cache.find(channel => channel.name === "spam");
+    const channel = client.channels.cache.find(channel => (channel.name.includes("spam") ||channel.name.includes("bot")));
     channel.send("Busku Bot is back!!");
     console.log(`Logged in as ${client.user.tag}!`);
 });
