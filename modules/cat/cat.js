@@ -44,7 +44,7 @@ class Cat{
 
     help(msg){
         /// Help me, HELP!!
-        let helpFile = fs.readFileSync("./modules/cat.help.json");
+        let helpFile = fs.readFileSync("./modules/cat/cat.help.json");
         let data =JSON.parse(helpFile);
         // We can create embeds using the MessageEmbed constructor
         // Read more about all that you can do with the constructor

@@ -4,33 +4,43 @@ require("dotenv").config();
 
 const randomTeam = require("./modules/randomTeam");
 const randomRace = require("./modules/randomRace");
-const cat = require("./modules/cat");
+const cat = require("./modules/cat/cat");
 const prefix = "*";
 
-client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+client.on("ready", () =>
+{
+    const channel = client.channels.cache.find(channel => channel.name === "spam");
+    channel.send("Busku Bot is back!!");
+    console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on("message", (msg) => {
-  if (!msg.content.startsWith(prefix)) return;
+client.on("message", (msg) =>
+{
+    if (!msg.content.startsWith(prefix)) return;
 
-  const args = msg.content.slice(prefix.length).trim().split(" ");
-  const command = args.shift().toLowerCase();
+    const args = msg.content.slice(prefix.length).trim().split(" ");
+    const command = args.shift().toLowerCase();
 
-  if (command === 'ping') {
-    msg.reply('xua con cat');
-  }else if (command === 'random_team') {
-    msg.channel.send(randomTeam(args));
-  }else if (command === 'cat') {
-    cat.command(args, msg);
-  } else if (command === "random_race") {
-    msg.channel.send(randomRace(args));
-  }else if (command === 'help') {
-    msg.reply('hihi chưa implement help <3');
-  }else{
-    msg.reply('xua con cat gì deo hiểu, "*help" đi bạn tôi ơi!');
-  }
+    if (command === 'ping')
+    {
+        msg.reply('xua con cat');
+    } else if (command === 'random_team')
+    {
+        msg.channel.send(randomTeam(args));
+    } else if (command === 'cat')
+    {
+        cat.command(args, msg);
+    } else if (command === "random_race")
+    {
+        msg.channel.send(randomRace(args));
+    } else if (command === 'help')
+    {
+        msg.reply('hihi chưa implement help <3');
+    } else
+    {
+        msg.reply('xua con cat gì deo hiểu, "*help" đi bạn tôi ơi!');
+    }
 });
 cat.help();
-console.log("Token: ",process.env.token.substr(0,20)+"...");
+console.log("Token: ", process.env.token.substr(0, 20) + "...");
 client.login(process.env.token);

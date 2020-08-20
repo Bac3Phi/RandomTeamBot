@@ -1,0 +1,9 @@
+{
+    "version":"1.0.0",
+    "description":"The first meow",
+    "feature":[
+        {"help":"give you a helping paw"},
+        {"meow": "meow back to you"},
+        {"showpussy":"taking a selfi"}
+    ]
+}
