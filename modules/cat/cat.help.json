@@ -3,6 +3,18 @@
         "help" : {
             "args" : null,
             "description" : "Let me give you a helping paw"
+        },
+        "meow" : {
+            "args" : null,
+            "description" : "Meooooow!"
+        },
+        "showpussy" : {
+            "args" : null,
+            "description" : "Send you my nude"
+        },
+        "feed" : {
+            "args" : ["Time"],
+            "description" : "YOU WILL FEED ME WHEN I WANT TO"
         }
     }
 }
