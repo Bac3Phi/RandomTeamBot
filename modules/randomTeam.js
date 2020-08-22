@@ -1,4 +1,4 @@
-const {defaultMessageTemplate} = require('./BotMessageEmbed');
+const defaultMessageTemplate = require('./BotMessageEmbed');
 module.exports = randomTeam = (args) => {
   let message = defaultMessageTemplate();
 
