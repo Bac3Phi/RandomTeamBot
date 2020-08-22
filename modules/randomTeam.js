@@ -1,8 +1,11 @@
+const {defaultMessageTemplate} = require('./BotMessageEmbed');
 module.exports = randomTeam = (args) => {
-  let message = "";
+  let message = defaultMessageTemplate();
 
   if (!args.length) {
-    return `You didn't provide any arguments`;
+    return message.addFields(
+      { name: 'Message', value: `You didn't provide any arguments` },
+    )
   }
 
   let team_size = args.shift();
@@ -21,8 +24,8 @@ module.exports = randomTeam = (args) => {
   }
 
   team_group.map((team, index) => {
-    message += `Team ${index + 1}: ${team}\n`;
+    message.addFields({ name: `Team ${index + 1}`, value: `${team}`, inline: true }) 
   });
 
-  return `Team group: ${team_size}\n${message}`;
+  return message;
 };
