@@ -23,8 +23,13 @@ module.exports = randomTeam = (args) => {
     team_group.push(temparray);
   }
 
+  var i = 0;
   team_group.map((team, index) => {
-    message.addFields({ name: `Team ${index + 1}`, value: `${team}`, inline: true }) 
+    let value = "";
+    team.forEach(element => {   
+        value += element + "\n";
+    });
+    message.addFields({ name: `Team ${index + 1}`, value: `${value}`, inline: true })
   });
 
   return message;
